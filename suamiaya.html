@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sumaiya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            padding: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "nav"
+                "content"
+                "footer";
+            max-width: 1200px;
+            margin: auto;
+            gap: 10px;
+        }
+        header, nav, .content, footer {
+            border: 2px solid #444;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        header {
+            grid-area: header;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        nav {
+            grid-area: nav;
+            background: #34495e;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            transition: background 0.3s ease;
+        }
+        nav:hover {
+            background: #2c3e50;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 10px;
+            padding: 10px;
+            min-height: 70vh; /* Makes content area taller */
+        }
+        .sidebar {
+            background: #1abc9c;
+            padding: 40px;
+            font-size: 18px;
+            color: white;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .sidebar:hover {
+            transform: scale(1.05);
+        }
+        .main-content {
+            background: #f39c12;
+            padding: 60px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer {
+            grid-area: footer;
+            background: #2c3e50;
+            padding: 20px;
+            font-size: 20px;
+            color: white;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <nav>Navigation Menu</nav>
+        <div class="content">
+            <aside class="sidebar">Sidebar Content</aside>
+            <section class="main-content">Main Content</section>
+            <aside class="sidebar">Sidebar Content</aside>
+        </div>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
